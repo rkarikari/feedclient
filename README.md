@@ -10,7 +10,7 @@
 ## 2: Install the adsb9g feed client
 
 ```
-curl -L -o /tmp/axfeed.sh https://adsb9g.com/feed.sh
+curl -L -o /tmp/axfeed.sh https:///feed.sh
 sudo bash /tmp/axfeed.sh
 ```
 
@@ -22,7 +22,7 @@ sudo bash /tmp/axfeed.sh
 ## 4: Optional: Install the stats package for an online map that shows only planes received by you:
 
 ```
-curl -L -o /tmp/axstats.sh https://adsb9g.com/stats.sh
+curl -L -o /tmp/axstats.sh https://stats.sh
 sudo bash /tmp/axstats.sh
 
 adsb9g-showurl
@@ -42,7 +42,7 @@ sudo bash /usr/local/share/tar1090/uninstall.sh adsbx
 ### Update the feed client without reconfiguring
 
 ```
-curl -L -o /tmp/axupdate.sh https://adsb9g.com/feed-update.sh
+curl -L -o /tmp/axupdate.sh https:///feed-update.sh
 sudo bash /tmp/axupdate.sh
 ```
 
@@ -68,7 +68,7 @@ If the client is up to date it should not take as long as the original installat
 otherwise this will also update the client which will take a moment.
 
 ```
-curl -L -o /tmp/axfeed.sh https://adsb9g.com/feed.sh
+curl -L -o /tmp/axfeed.sh https:///feed.sh
 sudo bash /tmp/axfeed.sh
 ```
 
@@ -89,7 +89,7 @@ sudo systemctl restart adsb9g-mlat
 
 ### Other device as a data source (networked standalone receivers):
 
-https://github.com/adsbxchange/wiki/wiki/Datasource-other-device
+https://github.com//wiki/wiki/Datasource-other-device
 
 ### Restart
 
