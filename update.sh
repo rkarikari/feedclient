@@ -95,7 +95,7 @@ function getGIT() {
     rm -rf "$tmp" "$tmp.folder"; return 1
 }
 
-REPO="https://github.com/adsb9g/feedclient.git"
+REPO="https://github.com/rkarikari/feedclient.git"
 BRANCH="master"
 
 IPATH=/usr/local/share/adsb9g
@@ -187,7 +187,7 @@ then
     rm -rf "$VENV"
 fi
 
-MLAT_REPO="https://github.com/adsb9g/mlat-client.git"
+MLAT_REPO="https://github.com/rkarikari/mlat-client.git"
 MLAT_BRANCH="master"
 MLAT_VERSION="$(git ls-remote $MLAT_REPO $MLAT_BRANCH | cut -f1 || echo $RANDOM-$RANDOM )"
 if [[ $REINSTALL != yes ]] && grep -e "$MLAT_VERSION" -qs $IPATH/mlat_version \
@@ -266,7 +266,7 @@ echo 70
 
 # SETUP FEEDER TO SEND DUMP1090 DATA TO ADS-B 9G
 
-READSB_REPO="https://github.com/adsb9g/readsb.git"
+READSB_REPO="https://github.com/rkarikari/readsb.git"
 READSB_BRANCH="master"
 if grep -E 'wheezy|jessie' /etc/os-release -qs; then
     READSB_BRANCH="jessie"
@@ -364,12 +364,12 @@ for name in adsb9g-netcat_maint.sh adsb9g-socat_maint.sh adsb9g-mlat_maint.sh; d
 done
 
 # in case the mlat-client service using /etc/default/mlat-client as config is using adsb9g as a host, disable the service
-if grep -qs 'SERVER_HOSTPORT.*feed.adsb9g.com' /etc/default/mlat-client &>/dev/null; then
+if grep -qs 'SERVER_HOSTPORT.*192.168.8.233' /etc/default/mlat-client &>/dev/null; then
     systemctl disable --now mlat-client >> $LOGFILE 2>&1 || true
 fi
 
 if [[ -f /etc/default/adsb9g ]]; then
-    sed -i -e 's/feed.adsb9g.com,30004,beast_reduce_out,feed.adsb9g.com,64004/feed1.adsb9g.com,30004,beast_reduce_out,feed2.adsb9g.com,64004/' /etc/default/adsb9g || true
+    sed -i -e 's/192.168.8.233,30004,beast_reduce_out,192.168.8.233,64004/192.168.8.233,30004,beast_reduce_out,192.168.8.233,64004/' /etc/default/adsb9g || true
 fi
 
 

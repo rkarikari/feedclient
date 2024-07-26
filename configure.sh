@@ -137,8 +137,8 @@ RESULTS4="--results beast,connect,127.0.0.1:30154"
 PRIVACY=""
 INPUT_TYPE="$INPUT_TYPE"
 
-MLATSERVER="feed.adsb9g.com:31090"
-TARGET="--net-connector feed1.adsb9g.com,30004,beast_reduce_out,feed2.adsb9g.com,64004"
+MLATSERVER="192.168.8.233:31090"
+TARGET="--net-connector 192.168.8.233,30004,beast_reduce_out,192.168.8.233,64004"
 NET_OPTIONS="--net-heartbeat 60 --net-ro-size 1280 --net-ro-interval 0.2 --net-ro-port 0 --net-sbs-port 0 --net-bi-port 30154 --net-bo-port 0 --net-ri-port 0 --write-json-every 1"
 JSON_OPTIONS="--max-range 450 --json-location-accuracy 2 --range-outline-hours 24"
 EOF
