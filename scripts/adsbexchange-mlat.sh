@@ -4,7 +4,7 @@ if grep -qs -e 'LATITUDE' /boot/adsb-config.txt &>/dev/null && [[ -f /boot/adsbx
     source /boot/adsb-config.txt
     source /boot/adsbx-env
 else
-    source /etc/default/adsbexchange
+    source /etc/default/adsb9g
 fi
 
 if [[ "$LATITUDE" == 0 ]] || [[ "$LONGITUDE" == 0 ]] || [[ "$USER" == 0 ]] || [[ "$USER" == "disable" ]]; then
@@ -23,7 +23,7 @@ while ! nc -z "$INPUT_IP" "$INPUT_PORT" && command -v nc &>/dev/null; do
     sleep 10
 done
 
-exec /usr/local/share/adsbexchange/venv/bin/mlat-client \
+exec /usr/local/share/adsb9g/venv/bin/mlat-client \
     --input-type "$INPUT_TYPE" --no-udp \
     --input-connect "$INPUT" \
     --server "$MLATSERVER" \
