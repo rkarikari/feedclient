@@ -385,14 +385,11 @@ Thanks for choosing to share your data with ADS-B 9G!
 If you're curious, check your feed status after 5 min:
 
 
-
-
-
- 
  
 
 Webinterface to show the data transmitted? Run this command:
-sudo bash -c "$(wget -nv -O - https://github.com/rkarikari/tar1090/raw/master/install.sh)"
+'sudo bash -c "$(wget -nv -O - https://github.com/rkarikari/tar1090/raw/master/install.sh)"'
+
 "
 
 INPUT_IP=$(echo $INPUT | cut -d: -f1)
