@@ -387,8 +387,9 @@ If you're curious, check your feed status after 5 min:
 
  
 
-Webinterface to show the data transmitted? Run this command:
-'sudo bash -c "$(wget -nv -O - https://github.com/rkarikari/tar1090/raw/master/install.sh)"'
+Webinterface to show the data transmitted? 
+  Install the accompanying tar1090...
+    https://github.com/rkarikari/tar1090
 
 "
 
