@@ -384,15 +384,15 @@ Thanks for choosing to share your data with ADS-B 9G!
 
 If you're curious, check your feed status after 5 min:
 
-https://adsb9g.com/myip/
-https://map.adsb9g.com/sync/
 
-Question? Issues? Go here:
-https://discord.gg/xKqyMzTXvg
-https://adsbx.discourse.group/
+
+
+
+ 
+ 
 
 Webinterface to show the data transmitted? Run this command:
-sudo bash /usr/local/share/adsb9g/git/install-or-update-interface.sh
+sudo bash -c "$(wget -nv -O - https://github.com/rkarikari/tar1090/raw/master/install.sh)"
 "
 
 INPUT_IP=$(echo $INPUT | cut -d: -f1)
